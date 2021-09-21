@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './components/header';
+import Content from './components/content';
+import Footer from './components/footer';
 
 function App() {
+  // State that stores the current page as a string
+  const [page, setPage] = useState('Home');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/*
+        I'm passing the setPage function to Header
+        because the Header component contains the
+        App's navmenu
+      */}
+      <Header
+        setPage={setPage}
+      />
+      {/*
+        The Content component needs to be aware of
+        which page the user wants to be on, so that
+        it renders the requested content
+      */}
+      <Content
+        page={page}
+      />
+      <Footer />
     </div>
   );
 }
