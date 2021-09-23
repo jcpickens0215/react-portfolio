@@ -10,7 +10,7 @@ export default function Content (props) {
             {props.page === 'Home' &&
                 <section class="heroBanner" id="About">
                     <div>
-                        <img src="./assets/images/Me.jpg" alt="" />
+                        <img src="./images/Me.jpg" alt="" />
                     </div>
                     <article id="bio">
                         <p>Hi, I'm Justin! I'm a Full Stack developer, currently working on increasing my skills.

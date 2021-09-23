@@ -1,0 +1,17 @@
+/* Set Global values for dev happiness and overall consistency */
+:root {
+    /* Set the main text color */
+    --textCol:#fff; 
+
+    /* Set the background color */
+    --bgCol:#242424;
+
+    /* Set the backround color for other elements  */
+    --panelCol:#363636;
+
+    /* General color for alpha background */
+    --textBackSoft: rgba(0, 0, 0, 30%);
+
+    /* General border radius for text elements */
+    --textBackBRad: 4px;
+}

@@ -4,7 +4,7 @@ const projects = [
         "isPrimary": true,
         "projectGithub": "https://github.com/jcpickens0215/S.W.O.R.D",
         "projectDeployed": "https://frozen-harbor-76666.herokuapp.com/",
-        "projectScreenshot": "./assets/images/SWORD_Hompage.png",
+        "projectScreenshot": "./images/SWORD_Hompage.png",
         "projectScreenshotDesc": "Click here to see the deployed version of S.W.O.R.D"
     },
     {

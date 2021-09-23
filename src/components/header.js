@@ -7,24 +7,24 @@ export default function Header (props) {
     }
 
     return (
-        <>
-        <h1>Justin Pickens</h1>
-        <nav>
-            <ul>
-                <li>
-                    <button onClick={() => handlePageChange('Home')}>About Me</button>
-                </li>
-                <li>
-                    <button onClick={() => handlePageChange('Work')}>My Work</button>
-                </li>
-                <li>
-                    <button onClick={() => handlePageChange('Contact')}>Contact Me</button>
-                </li>
-                <li>
-                    <button onClick={() => handlePageChange('Resume')}>Resume</button>
-                </li>
-            </ul>
-        </nav>
-        </>
+        <header>
+            <h1>Justin Pickens</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <button onClick={() => handlePageChange('Home')}>About Me</button>
+                    </li>
+                    <li>
+                        <button onClick={() => handlePageChange('Work')}>My Work</button>
+                    </li>
+                    <li>
+                        <button onClick={() => handlePageChange('Contact')}>Contact Me</button>
+                    </li>
+                    <li>
+                        <button onClick={() => handlePageChange('Resume')}>Resume</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
     );
 }
