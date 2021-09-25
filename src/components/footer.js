@@ -3,28 +3,11 @@ import React from 'react';
 export default function Footer () {
 
     return (
-        <footer class="contactInfo" id="Contact">
-            <h2>Contact Me</h2>
+        <footer className="contactInfo" id="Contact">
             <ul>
-                <li>
-                    <h4 style={{marginTop: 0}}>
-                        <a href="./assets/files/Resume.pdf" target="_blank">My Resume</a>
-                    </h4>
-                </li>
-
-                <li>
-                    <h4>Phone</h4>
-                </li>
-                <li>(682) 268-1433‬</li>
-
-                <li>
-                    <h4>E-mail</h4>
-                </li>
-                <li>justin.pickens.1994@gmail.com</li>
-
                 {/*Social links etc*/}
                 <li>
-                    <h4>Online</h4>
+                    <h4>My Online Presence</h4>
                 </li>
                 <li>
                     <a

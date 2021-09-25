@@ -8,7 +8,7 @@ function App() {
   const [page, setPage] = useState('Home');
 
   return (
-    <div>
+    <>
       {/*
         I'm passing the setPage function to Header
         because the Header component contains the
@@ -16,6 +16,7 @@ function App() {
       */}
       <Header
         setPage={setPage}
+        page={page}
       />
       {/*
         The Content component needs to be aware of
@@ -26,7 +27,7 @@ function App() {
         page={page}
       />
       <Footer />
-    </div>
+    </>
   );
 }
 

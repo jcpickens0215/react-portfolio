@@ -8,7 +8,7 @@ export default function Content (props) {
     return (
         <main>
             {props.page === 'Home' &&
-                <section class="heroBanner" id="About">
+                <section className="heroBanner" id="About">
                     <div>
                         <img src="./images/Me.jpg" alt="" />
                     </div>
@@ -18,7 +18,7 @@ export default function Content (props) {
                         <p>Some of the major technologies I use frequently are: HTML, CSS, JS, Node.js, Express.js,
                             MySQL, Sequelize, and Handlebars.
                         </p>
-                        <p>Please feel free to check out some of my deployed apps, listed below.
+                        <p>Please feel free to check out some of my deployed apps, under the "My Work" tab.
                         </p>
                     </article>
                 </section>
@@ -27,15 +27,16 @@ export default function Content (props) {
                 <>
                     <h2>My Work</h2>
                     <section>
-                        {ProjectList.map( (index) => {
+                        {ProjectList.map( (element, index) => {
                             return (
                                 <Project
-                                    projectTitle={index.projectTitle}
-                                    isPrimary={index.isPrimary}
-                                    projectGithub={index.projectGithub}
-                                    projectDeployed={index.projectDeployed}
-                                    projectScreenshot={index.projectScreenshot}
-                                    projectScreenshotDesc={index.projectScreenshotDesc}
+                                    projectTitle={element.projectTitle}
+                                    isPrimary={element.isPrimary}
+                                    projectGithub={element.projectGithub}
+                                    projectDeployed={element.projectDeployed}
+                                    projectScreenshot={element.projectScreenshot}
+                                    projectScreenshotDesc={element.projectScreenshotDesc}
+                                    key={index}
                                 />
                             )
                         })}
@@ -43,10 +44,28 @@ export default function Content (props) {
                 </>
             }
             {props.page === 'Contact' &&
-                <p>Contact me!</p>
+                <>
+                    <h2>Contact Me</h2>
+                    <ul className="contact">
+                        <li>
+                            <h4>Phone</h4>
+                        </li>
+                        <li>(682) 268-1433‬</li>
+
+                        <li>
+                            <h4>E-mail</h4>
+                        </li>
+                        <li>justin.pickens.1994@gmail.com</li>
+                    </ul>
+                </>
             }
             {props.page === 'Resume' &&
-                <p>Please hire me!</p>
+                <>
+                    <h2>Skills</h2>
+                    <h4 style={{marginTop: 0}}>
+                        <a href="./assets/files/Resume.pdf" target="_blank">My Resume</a>
+                    </h4>
+                </>
             }
         </main>
     );

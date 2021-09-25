@@ -12,16 +12,25 @@ export default function Header (props) {
             <nav>
                 <ul>
                     <li>
-                        <button onClick={() => handlePageChange('Home')}>About Me</button>
+                        <button 
+                        className={ props.page === 'Home'? 'selected':'' }
+                        onClick={() => handlePageChange('Home')}>About Me</button>
                     </li>
                     <li>
-                        <button onClick={() => handlePageChange('Work')}>My Work</button>
+                        
+                        <button
+                        className={ props.page === 'Work'? 'selected':'' }
+                        onClick={() => handlePageChange('Work')}>My Work</button>
                     </li>
                     <li>
-                        <button onClick={() => handlePageChange('Contact')}>Contact Me</button>
+                        <button
+                        className={ props.page === 'Contact'? 'selected':'' }
+                        onClick={() => handlePageChange('Contact')}>Contact Me</button>
                     </li>
                     <li>
-                        <button onClick={() => handlePageChange('Resume')}>Resume</button>
+                        <button
+                        className={ props.page === 'Resume'? 'selected':'' }
+                        onClick={() => handlePageChange('Resume')}>Resume</button>
                     </li>
                 </ul>
             </nav>
