@@ -54,17 +54,11 @@ header h1 {
 
 /* Navigation bar styling */
 nav {
-    width: 384px;
-    height: 32px;
-    position: relative;
     flex: 1 1 300px;
     background-color: inherit;
 }
 
 nav ul {
-    width: 384px;
-    position: absolute;
-    right: 0;
     flex: 1 1 300px;
     display: flex;
     justify-content: flex-end;
@@ -73,7 +67,6 @@ nav ul {
 
 nav li {
     width: 128px;
-    margin: 6px;
     text-align: center;
     flex-direction: row;
     flex: 1 0 100px;
@@ -255,7 +248,7 @@ footer ul, .contact {
     }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 730px) {
     header {
         flex-direction: column;
     }
@@ -264,6 +257,10 @@ footer ul, .contact {
         text-align: center;
         margin: 10px;
         height: 66px;
+    }
+
+    nav ul {
+        justify-content: space-around;
     }
 
     #bio, .cardHeader a, .cardHeader h3 {
@@ -288,8 +285,26 @@ footer ul, .contact {
     }
 }
 
-@media screen and (max-width: 485px) {
+@media screen and (max-width: 512px) {
+    header {
+        height: 180px;
+    }
+    header h1, nav, nav ul {
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%
+    }
+    nav li {
+        flex: 0 0 28px;
+        width: 100%;
+    }
     .heroBanner {
         background-size: 300%;
     }
+}
+
+@media screen and (max-width: 384px) {
+    
 }
