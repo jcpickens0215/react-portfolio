@@ -1,0 +1,295 @@
+/* Apply universal styling to everything not overridden */
+* {
+    background-color: var(--bgCol);
+    color: var(--textCol);
+    font-family: sans-serif;
+    line-height: 1.25;
+}
+
+/* Set full width */
+body {
+    width: 100%;
+}
+
+/* Set header sizes and alignment */
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 175%;
+    margin: 25px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 150%;
+}
+
+h4 {
+    font-size: 125%;
+    text-align: center;
+    margin-top: 12px;
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--panelCol);
+}
+
+header h1 {
+    width: 384px;
+    text-align: left;
+    flex: 1 1 300px;
+    margin: 10px 10px 10px 5%;
+    background-color: inherit;
+}
+
+/* Navigation bar styling */
+nav {
+    width: 384px;
+    height: 32px;
+    position: relative;
+    flex: 1 1 300px;
+    background-color: inherit;
+}
+
+nav ul {
+    width: 384px;
+    position: absolute;
+    right: 0;
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: inherit;
+}
+
+nav li {
+    width: 128px;
+    margin: 6px;
+    text-align: center;
+    flex-direction: row;
+    flex: 1 0 100px;
+    background-color: inherit;
+    border: none;
+    border-radius: var(--textBackBRad);
+}
+
+nav button {
+    padding: 4px 8px;
+    border: none;
+    text-decoration: none;
+    background-color: inherit;
+}
+
+nav button:hover {
+    background-color: #404040;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #484848;
+}
+
+/* Hero image styling */
+.heroBanner {
+    height: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/Hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+#bio {
+    width: 50%;
+    text-align: center;
+    background-color: var(--textBackSoft);
+    border: 1px solid var(--textBackSoft);
+    border-radius: var(--textBackBRad);
+}
+
+#bio p {
+    padding: 10px;
+    background-color: inherit;
+}
+
+.heroBanner div {
+    width: 100px;
+    height: 100px;
+    margin: 30px auto;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.heroBanner img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: 0 0;
+    border: 1px solid #fff;
+    border-radius: 100%;
+}
+
+/* Main content styling */
+.myWork {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardHeader {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 8px;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.cardHeader h3 {
+    width: 40%;
+    max-width: 360px;
+    text-align: center;
+    padding: 0 6px;
+    margin: 6px 0;
+    background-color: rgba(0, 0, 0, 50%);
+    border: 1px solid var(--textBackSoft);
+    border-radius: var(--textBackBRad);
+}
+
+.cardHeader a {
+    width: 40%;
+    max-width: 360px;
+    text-align: center;
+    padding: 0 6px;
+    margin: 6px 0;
+    background-color: #344cb8;
+    border: 1px solid var(--textBackSoft);
+    border-radius: var(--textBackBRad);
+    text-decoration: none;
+    font-size: 150%;
+}
+
+.cardHeader a:hover {
+    background-color: #4769FF;
+}
+
+.cardHeader a:active {
+    background-color: #1E2C6B;
+}
+
+.card {
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    margin-top: 60px;
+    position: relative;
+    background-color: #888;
+}
+
+/* Make the first project larger */
+.shiny {
+    height: 1000px;
+}
+
+.card img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    filter: grayscale(60%);
+    border-bottom: 4px solid #000;
+}
+
+.shiny img {
+    height: 1000px;
+}
+
+/* Image alignment classes */
+.topcenter img {
+    object-position: top center;
+}
+
+.topleft img {
+    object-position: 0 0;
+}
+
+.leftcenter img {
+    object-position: left center;
+}
+
+.card img:hover {
+    cursor: pointer;
+}
+
+.card:hover img {
+    filter: grayscale(0%);
+}
+
+footer {
+    width: 100%;
+    margin-top: 84px;
+}
+
+footer ul, .contact {
+    min-height: 250px;
+    text-align: center;
+}
+
+/* Responsive layout styling here */
+@media screen and (max-width: 960px) {
+    .heroBanner {
+        background-size: 200%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    header {
+        flex-direction: column;
+    }
+
+    header h1 {
+        text-align: center;
+        margin: 10px;
+        height: 66px;
+    }
+
+    #bio, .cardHeader a, .cardHeader h3 {
+        width: 95%;
+    }
+
+    .heroBanner {
+        background-size: 200%;
+    }
+
+    .card {
+        margin-top: 104px;
+    }
+
+    .cardHeader {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        margin-top: 128px;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .heroBanner {
+        background-size: 300%;
+    }
+}
