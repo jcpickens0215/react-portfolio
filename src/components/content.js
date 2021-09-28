@@ -1,6 +1,7 @@
 import React from 'react';
 import Project from './project';
 import ProjectList from '../project_list';
+import Contact from './contact';
 
 export default function Content (props) {
 
@@ -57,6 +58,7 @@ export default function Content (props) {
                         </li>
                         <li>justin.pickens.1994@gmail.com</li>
                     </ul>
+                    <Contact />
                 </>
             }
             {props.page === 'Resume' &&
