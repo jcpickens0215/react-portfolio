@@ -69,7 +69,6 @@ nav li {
     width: 128px;
     text-align: center;
     flex-direction: row;
-    flex: 1 0 100px;
     background-color: inherit;
     border: none;
     border-radius: var(--textBackBRad);
@@ -231,14 +230,24 @@ nav button:hover {
     filter: grayscale(0%);
 }
 
+.contact {
+    text-align: center;
+}
+
+form * {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 6px;
+}
+
 footer {
     width: 100%;
     margin-top: 84px;
 }
 
 footer ul, .contact {
-    min-height: 250px;
     text-align: center;
+    margin-bottom: 16px;
 }
 
 /* Responsive layout styling here */
