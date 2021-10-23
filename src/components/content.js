@@ -65,7 +65,7 @@ export default function Content (props) {
                 <>
                     <h2>Skills</h2>
                     <h4 style={{marginTop: 0}}>
-                        <a href="./assets/files/Resume.pdf" target="_blank">My Resume</a>
+                        <a href="./files/Resume_2021-10-21.pdf" target="_blank">My Resume</a>
                     </h4>
                 </>
             }

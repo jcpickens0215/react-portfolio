@@ -29,12 +29,25 @@ export default function Contact () {
         }
     };
 
-    const handleFormSubmit = (e) => {
+    const handleFormSubmit = async (e) => {
         // Prevent refresh
         e.preventDefault();
 
-        // FUTURE: Add Fetch POST
-        console.log(yourName, email, message);
+        const userData = {
+            name: yourName,
+            email,
+            message
+        }
+
+        const response = await fetch('https://salty-escarpment-92585.herokuapp.com/', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData),
+        });
+
+        console.log(response);
 
         // Reset form fields on submit
         setYourName('');
@@ -44,34 +57,37 @@ export default function Contact () {
 
     return (
         <form>
-            <input
-                value={yourName}
-                name="yourName"
-                onChange={handleInputChange}
-                type="text"
-                placeholder="Your Name"
-                required
-            />
-            <input
-                value={email}
-                name="email"
-                onChange={handleInputChange}
-                type="text"
-                placeholder="Your e-mail"
-                required
-            />
-            <p className="contact" style={errorStyle}>Invalid e-mail address</p>
-            <textarea
-                value={message}
-                name="message"
-                onChange={handleInputChange}
-                type="text"
-                required
-            ></textarea>
-            <button
-                onClick={handleFormSubmit}
-            ><del>Submit</del></button>
-            <p className="contact">This form is currently under construction</p>
+            <fieldset>
+                <legend>Send me a message:</legend>
+                <input
+                    value={yourName}
+                    name="yourName"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                />
+                <input
+                    value={email}
+                    name="email"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="Your e-mail"
+                    required
+                />
+                <p className="contact" style={errorStyle}>Invalid e-mail address</p>
+                <textarea
+                    value={message}
+                    name="message"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="message"
+                    required
+                ></textarea>
+                <button
+                    onClick={handleFormSubmit}
+                >Submit</button>
+            </fieldset>
         </form>
     );
 }

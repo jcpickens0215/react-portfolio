@@ -1,7 +1,15 @@
 const projects = [
     {
-        "projectTitle": "S.W.O.R.D",
+        "projectTitle": "Gear Out!",
         "isPrimary": true,
+        "projectGithub": "https://github.com/lelandcypress/Gear_Out",
+        "projectDeployed": "https://quiet-garden-76902.herokuapp.com/",
+        "projectScreenshot": "./images/Gear-Out_Hompage.png",
+        "projectScreenshotDesc": "Click here to see the deployed version of Gear Out!"
+    },
+    {
+        "projectTitle": "S.W.O.R.D",
+        "isPrimary": false,
         "projectGithub": "https://github.com/jcpickens0215/S.W.O.R.D",
         "projectDeployed": "https://frozen-harbor-76666.herokuapp.com/",
         "projectScreenshot": "./images/SWORD_Hompage.png",
@@ -38,14 +46,6 @@ const projects = [
         "projectDeployed": "https://jcpickens0215.github.io/Daily-Schedule/",
         "projectScreenshot": "https://raw.githubusercontent.com/jcpickens0215/Daily-Schedule/main/assets/images/Readme-Screenshot.png",
         "projectScreenshotDesc": "Click here to see the deployed version of Daily Schedule"
-    },
-    {
-        "projectTitle": "",
-        "isPrimary": false,
-        "projectGithub": "",
-        "projectDeployed": "",
-        "projectScreenshot": "",
-        "projectScreenshotDesc": ""
     }
 ];
 
