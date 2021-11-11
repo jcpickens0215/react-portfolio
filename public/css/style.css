@@ -114,7 +114,7 @@ nav button:hover {
 
 #bio p {
     padding: 10px;
-    background-color: inherit;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .heroBanner div {
@@ -146,6 +146,8 @@ nav button:hover {
     flex-direction: row;
     width: 100%;
     padding: 8px;
+    background: rgb(36,36,36);
+    background: linear-gradient(0deg, rgba(36,36,36,1) 45%, rgba(96,96,96,1) 100%);
     justify-content: space-around;
     z-index: 1;
 }
@@ -167,6 +169,7 @@ nav button:hover {
     text-align: center;
     padding: 0 6px;
     margin: 6px 0;
+    color: var(--textCol);
     background-color: #344cb8;
     border: 1px solid var(--textBackSoft);
     border-radius: var(--textBackBRad);
@@ -182,12 +185,25 @@ nav button:hover {
     background-color: #1E2C6B;
 }
 
-.card {
+.detailsText {
+    margin: 0;
+    padding: 0.5rem;
+    position: absolute;
+    top: 4.4rem;
+    right: 0.5rem;
+    color: var(--textCol);
+    font-style: italic;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 50%);
+    border-radius: var(--textBackBRad);
+    z-index: 1;
+}
+
+.mycard {
     width: 100%;
     height: 600px;
     margin: 0;
     padding: 0;
-    margin-top: 60px;
     position: relative;
     background-color: #888;
 }
@@ -197,7 +213,7 @@ nav button:hover {
     height: 1000px;
 }
 
-.card img {
+.mycard img {
     width: 100%;
     height: 600px;
     object-fit: cover;
@@ -222,11 +238,11 @@ nav button:hover {
     object-position: left center;
 }
 
-.card img:hover {
+.mycard img:hover {
     cursor: pointer;
 }
 
-.card:hover img {
+.mycard:hover img {
     filter: grayscale(0%);
 }
 
@@ -289,6 +305,10 @@ footer ul, .contact {
         align-items: center;
     }
 
+    .detailsText {
+        top: 7.1rem;
+    }
+
     footer {
         margin-top: 128px;
     }
@@ -303,7 +323,8 @@ footer ul, .contact {
     }
     nav ul {
         flex-direction: column;
-        width: 100%
+        width: 100%;
+        padding-bottom: 12px;
     }
     nav li {
         flex: 0 0 28px;

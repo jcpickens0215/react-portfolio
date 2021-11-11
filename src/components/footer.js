@@ -3,7 +3,7 @@ import React from 'react';
 export default function Footer () {
 
     return (
-        <footer className="contactInfo" id="Contact">
+        <footer className="contactInfo fixed-bottom" id="Contact">
             <ul>
                 {/*Social links etc*/}
                 <li>

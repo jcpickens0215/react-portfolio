@@ -8,12 +8,12 @@ export default function Project(props) {
     // Define card style dependent on isPrimary
     const headerStyle = projectData.isPrimary?
         { // Yep
-            classList: "card shiny topleft",
+            classList: "mycard shiny topleft",
             styleMod: { marginTop: 0 },
         }
         :
         { // Nope
-            classList: "card topleft",
+            classList: "mycard topleft",
             styleMod: {},
         };
 
@@ -42,6 +42,7 @@ export default function Project(props) {
                     href={projectData.projectDeployed}
                     target="_blank"
                     rel="noreferrer">
+                    <p className="detailsText">Click for more details</p>
                     <img src={projectData.projectScreenshot}
                         alt={projectData.projectScreenshotDesc}
                     />

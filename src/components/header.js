@@ -10,7 +10,7 @@ export default function Header (props) {
         <header>
             <h1>Justin Pickens</h1>
             <nav>
-                <ul>
+                <ul className="mb-0 ps-0">
                     <li>
                         <button 
                         className={ props.page === 'Home'? 'selected':'' }

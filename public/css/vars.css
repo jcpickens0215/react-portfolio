@@ -10,7 +10,7 @@
     --panelCol:#363636;
 
     /* General color for alpha background */
-    --textBackSoft: rgba(0, 0, 0, 30%);
+    --textBackSoft: rgba(0, 0, 0, 50%);
 
     /* General border radius for text elements */
     --textBackBRad: 4px;

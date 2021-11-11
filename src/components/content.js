@@ -14,12 +14,12 @@ export default function Content (props) {
                         <img src="./images/Me.jpg" alt="" />
                     </div>
                     <article id="bio">
-                        <p>Hi, I'm Justin! I'm a Full Stack developer, currently working on increasing my skills.
+                        <p className="my-0">Hi, I'm Justin! I'm a Full Stack developer, currently working on increasing my skills.
                         </p>
-                        <p>Some of the major technologies I use frequently are: HTML, CSS, JS, Node.js, Express.js,
+                        <p className="my-0">Some of the major technologies I use frequently are: HTML, CSS, JS, Node.js, Express.js,
                             MySQL, Sequelize, and Handlebars.
                         </p>
-                        <p>Please feel free to check out some of my deployed apps, under the "My Work" tab.
+                        <p className="my-0">Please feel free to check out some of my deployed apps, under the "My Work" tab.
                         </p>
                     </article>
                 </section>
