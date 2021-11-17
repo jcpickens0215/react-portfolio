@@ -2,6 +2,8 @@ import React from 'react';
 import Project from './project';
 import ProjectList from '../project_list';
 import Contact from './contact';
+import Skill from './skill';
+import skillsList from '../skillsList';
 
 export default function Content (props) {
 
@@ -9,7 +11,7 @@ export default function Content (props) {
     return (
         <main>
             {props.page === 'Home' &&
-                <section className="heroBanner" id="About">
+                <section className="container heroBanner" id="About">
                     <div>
                         <img src="./images/Me.jpg" alt="" />
                     </div>
@@ -22,12 +24,13 @@ export default function Content (props) {
                         <p className="my-0">Please feel free to check out some of my deployed apps, under the "My Work" tab.
                         </p>
                     </article>
+                    <div className="spacer"></div>
                 </section>
             }
             {props.page === 'Work' &&
                 <>
                     <h2>My Work</h2>
-                    <section>
+                    <section class="container">
                         {ProjectList.map( (element, index) => {
                             return (
                                 <Project
@@ -41,32 +44,49 @@ export default function Content (props) {
                                 />
                             )
                         })}
+                        <div className="spacer"></div>
                     </section>
                 </>
             }
             {props.page === 'Contact' &&
                 <>
-                    <h2>Contact Me</h2>
-                    <ul className="contact">
-                        <li>
-                            <h4>Phone</h4>
-                        </li>
-                        <li>(682) 268-1433‬</li>
+                    <section className="container">
+                        <h2>Contact Me</h2>
+                        <ul className="contact">
+                            <li>
+                                <h4>Phone</h4>
+                            </li>
+                            <li>(682) 268-1433</li>
 
-                        <li>
-                            <h4>E-mail</h4>
-                        </li>
-                        <li>justin.pickens.1994@gmail.com</li>
-                    </ul>
-                    <Contact />
+                            <li>
+                                <h4>E-mail</h4>
+                            </li>
+                            <li>justin.pickens.1994@gmail.com</li>
+                        </ul>
+                        <Contact />
+                        <div className="spacer"></div>
+                    </section>
                 </>
             }
             {props.page === 'Resume' &&
                 <>
-                    <h2>Skills</h2>
+                    <h2 className="mb-1">Skills</h2>
+                    <section className="container skills">
+                        <div className="row mb-3 pt-0">
+                            {skillsList.map((item) => {
+                                return (
+                                    <Skill
+                                        iconSource={item.iconSource}
+                                        iconName={item.iconName}
+                                    />
+                                )
+                            })}
+                        </div>
+                    </section>
                     <h4 style={{marginTop: 0}}>
                         <a href="./files/Resume_2021-10-21.pdf" target="_blank">My Resume</a>
                     </h4>
+                    <div className="spacer"></div>
                 </>
             }
         </main>

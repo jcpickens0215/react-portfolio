@@ -146,8 +146,9 @@ nav button:hover {
     flex-direction: row;
     width: 100%;
     padding: 8px;
-    background: rgb(36,36,36);
-    background: linear-gradient(0deg, rgba(36,36,36,1) 45%, rgba(96,96,96,1) 100%);
+    background: inherit;
+    background: linear-gradient(0deg, rgba(36,36,36,1) 66%, rgba(96,96,96,1) 100%);
+    border-radius: 8px 8px 0 0;
     justify-content: space-around;
     z-index: 1;
 }
@@ -203,9 +204,10 @@ nav button:hover {
     width: 100%;
     height: 600px;
     margin: 0;
+    margin-bottom: 2rem;
     padding: 0;
     position: relative;
-    background-color: #888;
+    background-color: inherit;
 }
 
 /* Make the first project larger */
@@ -215,10 +217,11 @@ nav button:hover {
 
 .mycard img {
     width: 100%;
-    height: 600px;
+    height: 540px;
     object-fit: cover;
     filter: grayscale(60%);
-    border-bottom: 4px solid #000;
+    background-color: #888;
+    border-radius: 0 0 8px 8px;
 }
 
 .shiny img {
@@ -246,6 +249,12 @@ nav button:hover {
     filter: grayscale(0%);
 }
 
+.skills div {
+    text-align: center;
+    font-size: 72pt;
+    padding: 12px;
+}
+
 .contact {
     text-align: center;
 }
@@ -254,6 +263,12 @@ form * {
     display: block;
     margin: 0 auto;
     margin-bottom: 6px;
+}
+
+.spacer {
+    height: 100px;
+    margin: none;
+    padding: none;
 }
 
 footer {
