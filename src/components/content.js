@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Project from './project';
 import ProjectList from '../project_list';
 import Contact from './contact';
 import Skill from './skill';
 import skillsList from '../skillsList';
+import Modal from './modal';
 
 export default function Content (props) {
 
+    const [modalContent, setModalContent] = useState({});
+    const [modalVisible, setModalVisible] = useState(false);
+
+    const showModal = () => setModalVisible(true);
+    const dismissModal = () => setModalVisible(false);
+
+    useEffect(() => {console.log("VISIBLE? ", modalVisible)}, [modalVisible]);
 
     return (
         <main>
@@ -30,10 +38,11 @@ export default function Content (props) {
             {props.page === 'Work' &&
                 <>
                     <h2>My Work</h2>
-                    <section class="container">
+                    <section className="container">
                         {ProjectList.map( (element, index) => {
                             return (
                                 <Project
+                                    showModal={showModal}
                                     projectTitle={element.projectTitle}
                                     isPrimary={element.isPrimary}
                                     projectGithub={element.projectGithub}
@@ -44,6 +53,11 @@ export default function Content (props) {
                                 />
                             )
                         })}
+                        <Modal 
+                            visible={modalVisible}
+                            dismissModal={dismissModal}
+                            modalcontent={modalContent}
+                        />
                         <div className="spacer"></div>
                     </section>
                 </>

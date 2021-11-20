@@ -249,6 +249,10 @@ nav button:hover {
     filter: grayscale(0%);
 }
 
+.modal{
+    display: block;
+}
+
 .skills div {
     text-align: center;
     font-size: 72pt;

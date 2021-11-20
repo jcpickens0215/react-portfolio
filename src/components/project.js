@@ -38,15 +38,12 @@ export default function Project(props) {
                         rel="noreferrer"
                     >Github Repo</a>
                 </div>
-                <a
-                    href={projectData.projectDeployed}
-                    target="_blank"
-                    rel="noreferrer">
+                <i onClick={props.showModal}>
                     <p className="detailsText">Click for more details</p>
                     <img src={projectData.projectScreenshot}
                         alt={projectData.projectScreenshotDesc}
                     />
-                </a>
+                </i>
             </div>
         </>
     );
