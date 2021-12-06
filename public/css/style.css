@@ -197,6 +197,7 @@ nav button:hover {
     text-decoration: none;
     background-color: rgba(0, 0, 0, 50%);
     border-radius: var(--textBackBRad);
+    cursor: pointer;
     z-index: 1;
 }
 
@@ -291,6 +292,12 @@ form * {
 footer {
     width: 100%;
     margin-top: 84px;
+    background: inherit;
+    background: linear-gradient(0deg, rgba(36,36,36,1) 80%, rgba(96,96,96,1) 100%);
+}
+
+footer ul, footer li, footer h4 {
+    background: none;
 }
 
 footer ul, .contact {
@@ -335,6 +342,10 @@ footer ul, .contact {
     .cardHeader {
         flex-direction: column;
         align-items: center;
+    }
+
+    .mycard img {
+        height: 498px;
     }
 
     .detailsText {

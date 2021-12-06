@@ -8,11 +8,11 @@ export default function Modal (props) {
         <>
         { props.visible ?
             (
-                <div className="modal" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal" id="projectModal" tabIndex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
                     <div className="modal-dialog modal-dialog-centered">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h5 className="modal-title" id="exampleModalLabel">{content.title}</h5>
+                                <h5 className="modal-title" id="projectModalLabel">{content.projectTitle}</h5>
                                 <button
                                     type="button"
                                     className="btn-close"
@@ -21,7 +21,23 @@ export default function Modal (props) {
                                 ></button>
                             </div>
                             <div className="modal-body">
-                                <p>{content.body}</p>
+                                <p>
+                                    <a
+                                        href={content.projectGithub}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >Project GitHub Repo</a>
+                                </p>
+                                <p>
+                                    <a
+                                        href={content.projectDeployed}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >Deployed App</a>
+                                </p>
+                                <p>{content.projectDescription}</p>
+                                <p>{content.projectTech}</p>
+                                <p>{content.projectAuth}</p>
                             </div>
                         </div>
                     </div>

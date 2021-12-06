@@ -43,16 +43,16 @@ export default function Content (props) {
                         {ProjectList.map( (element, index) => {
                             return (
                                 <Project
+                                    key={index}
+                                    index={index}
+                                    isPrimary={element?.isPrimary? true : false
+                                        /*Does the key isPrimary exist?*/
+                                    }
+                                    projectTitle={element.modalContent.projectTitle}
+                                    projectDeployed={element.modalContent.projectDeployed}
+                                    projectScreenshot={element.projectScreenshot}
                                     showModal={showModal}
                                     handleProjectContent={handleProjectContent}
-                                    projectTitle={element.projectTitle}
-                                    isPrimary={element.isPrimary}
-                                    projectGithub={element.projectGithub}
-                                    projectDeployed={element.projectDeployed}
-                                    projectScreenshot={element.projectScreenshot}
-                                    projectScreenshotDesc={element.projectScreenshotDesc}
-                                    index={index}
-                                    key={index}
                                 />
                             )
                         })}
@@ -90,9 +90,10 @@ export default function Content (props) {
                     <h2 className="mb-1">Skills</h2>
                     <section className="container skills">
                         <div className="row mb-3 pt-0">
-                            {skillsList.map((item) => {
+                            {skillsList.map((item, index) => {
                                 return (
                                     <Skill
+                                        key={index}
                                         iconSource={item.iconSource}
                                         iconName={item.iconName}
                                     />
