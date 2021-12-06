@@ -249,8 +249,21 @@ nav button:hover {
     filter: grayscale(0%);
 }
 
-.modal{
+.modal {
     display: block;
+    background: none;
+}
+
+.modal-dialog {
+    background: none;
+}
+
+.modal-content {
+    background: var(--bgCol);
+}
+
+.btn-close {
+    background-color: red;
 }
 
 .skills div {

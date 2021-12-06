@@ -13,8 +13,9 @@ export default function Content (props) {
 
     const showModal = () => setModalVisible(true);
     const dismissModal = () => setModalVisible(false);
-
-    useEffect(() => {console.log("VISIBLE? ", modalVisible)}, [modalVisible]);
+    const handleProjectContent = (index) => {
+        setModalContent(ProjectList[index].modalContent);
+    }
 
     return (
         <main>
@@ -43,12 +44,14 @@ export default function Content (props) {
                             return (
                                 <Project
                                     showModal={showModal}
+                                    handleProjectContent={handleProjectContent}
                                     projectTitle={element.projectTitle}
                                     isPrimary={element.isPrimary}
                                     projectGithub={element.projectGithub}
                                     projectDeployed={element.projectDeployed}
                                     projectScreenshot={element.projectScreenshot}
                                     projectScreenshotDesc={element.projectScreenshotDesc}
+                                    index={index}
                                     key={index}
                                 />
                             )

@@ -17,14 +17,22 @@ export default function Project(props) {
             styleMod: {},
         };
 
+    const doOnClick = () => {
+        console.log("Click!", props);
+        props.showModal();
+        props.handleProjectContent(props.index);
+    }
     /*
     Props:
+        showModal - Toggles Modal
+        handleModalContent - sets relevant display content for modal
         isPrimary - top of page
         projectTitle - Name of project
         projectGithub - project repository
         projectDeployed - demo of project
         projectScreenshot - src of project screenshot
         projectScreenshotDesc - alt text
+        index - Have to use in place of key, because key is inaccessible
     */
 
     return (
@@ -38,7 +46,7 @@ export default function Project(props) {
                         rel="noreferrer"
                     >Github Repo</a>
                 </div>
-                <i onClick={props.showModal}>
+                <i onClick={doOnClick}>
                     <p className="detailsText">Click for more details</p>
                     <img src={projectData.projectScreenshot}
                         alt={projectData.projectScreenshotDesc}
